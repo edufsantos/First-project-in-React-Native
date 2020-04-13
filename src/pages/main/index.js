@@ -91,11 +91,10 @@ export default class Main extends Component {
                placeholder="adicionar úsuario"
                returnKeyType="send"
                onSubmitEditing={this.handleAddUser}/>
-            <SubmitButtom loading={loading} onPress={this.handleAddUser}>
+              <SubmitButtom loading={loading} onPress={this.handleAddUser}>
               {loading ? <ActivityIndicator color="#fff"/>:
                 <Icon name="add" size={20} color="#fff"/>
               }
-
             </SubmitButtom>
           </Form>
 
@@ -107,7 +106,6 @@ export default class Main extends Component {
                   <Avatar  source={{ uri: item.Avatar,}}/>
                   <Name>{item.name}</Name>
                   <Bio>{item.bio}</Bio>
-
                   <ProfileButtom onPress={() => this.handleNavigate(item)}>
                     <ProfileButtomText>Ver Perfil</ProfileButtomText>
                   </ProfileButtom>
